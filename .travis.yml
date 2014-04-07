@@ -1,9 +1,11 @@
 language: python
+python:
+  - "2.7"
 branches:
   only:
-  - branch-6-4
+    - branch-6-4
 install:
-- pip install Sphinx
+  - pip install Sphinx
 script:
-- mkdir -p /tmp/docs/branch-6-4
-- ./scripts/build_docs.sh . branch-6-4 /tmp/docs/branch-6-4
+  - mkdir -p /tmp/docs/branch-6-4
+  - ./scripts/build_docs.sh . branch-6-4 /tmp/docs/branch-6-4
