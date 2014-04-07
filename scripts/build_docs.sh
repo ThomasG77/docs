@@ -14,17 +14,12 @@ cd "$REPO"
 git checkout $BRANCH
 git pull origin $BRANCH | grep "up-to-date"
 
-if test $? -eq 0; then
-  echo "repo not updated, no use building"
-  exit
-fi
-
 mkdir -p $BUILDDIR
 git archive --format=tar $BRANCH | (cd $BUILDDIR && tar xf -)
 cd $BUILDDIR
 
 
-
+# Copy all untranslated files in language dir and
 
 
 # Copy all untranslated files in language dir and
