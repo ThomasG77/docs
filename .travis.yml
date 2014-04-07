@@ -1,0 +1,9 @@
+language: python
+branches:
+  only:
+  - master
+install:
+- pip install Sphinx
+script:
+- mkdir -p /tmp/docs/branch-6-4
+- ./scripts/build_docs.sh . branch-6-4 /tmp/docs/branch-6-4
